@@ -9,3 +9,8 @@ En este repositorio se encuentra desarrollado el frontend de la pagina web Dolar
 ## Links
 - [Pagina Web del proyecto : https://dolar-arg.000webhostapp.com/](https://dolar-arg.000webhostapp.com/)
 - [Repo del back: https://github.com/LeanCabeza/dolar-arg-ms](https://github.com/LeanCabeza/dolar-arg-ms)
+
+## Screnshots
+![Main Page](https://github.com/LeanCabeza/dolarArg-Front/blob/main/assets/img/screenshots/main.png?raw=true)
+![Notification](https://github.com/LeanCabeza/dolarArg-Front/blob/main/assets/img/screenshots/notification.png?raw=true)
+![Alta](https://github.com/LeanCabeza/dolarArg-Front/blob/main/assets/img/screenshots/alta.png?raw=true)
