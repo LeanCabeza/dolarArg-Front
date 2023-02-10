@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="shortcut icon" href="https://dolar-arg.000webhostapp.com/assets/img/icons/rosette.png">
+  <title>DolarArg!</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div id="logo">
+        <h1><a href="index.html">Dolar<span>Arg</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <!--
+        
+        <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="#"><span>Divisas</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Dolar</a></li>
+              <li><a href="#">Euro</a></li>
+              <li><a href="#">Oro</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Precio dólar 24/7</h2>
+    </div>
+
+    <div class="hero-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/1.png');"></div>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+    <!-- ======= Cotizaciones Section ======= -->
+    <section id="cotizations">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="row" id="dolar-container">
+  
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+
+   <!-- ======= Contact Section ======= -->
+   <section id="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Recibi el precio del dolar Diariamente!</h2>
+        <p>Cargando tus datos te notificaremos una vez por dia via Email los valores de las cotizaciones</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="form">
+        <form class="php-email-form">
+          <div class="row">
+
+            <div class="form-group col-md-12 mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email, ejemplo: dolarArg@gmail.com" required>
+            </div>
+          </div>
+          <br>
+          <div class="text-center"><button id="subscribeBtn">Recibir Cotizaciones</button></div>
+        </form>
+      </div>
+
+    </div>  
+  </section><!-- End Contact Section -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>DolarArg</strong>. Todos los derechos reservados
+        <br>
+        <p>DolarArg.com es un sitio meramente informativo y no brinda asesoramiento ni invitación para realizar operaciones de ningún tipo. La información aquí presentada es de acceso público y los cuadros son elaborados con base en esta información y son propiedad intelectual protegida por la Ley N°11.723. Los titulares del sitio no son responsables por la falta de precisión o veracidad de la información y deslindan cualquier responsabilidad por el uso que se le dé a la misma. No se hacen responsables por posibles daños o perjuicios resultantes de decisiones basadas en la información del sitio. No hay acuerdo ni vínculo con los anunciantes y la responsabilidad por los contenidos publicitarios es exclusiva de los anunciantes.</p>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://kit.fontawesome.com/91c78e930c.js" crossorigin="anonymous"></script>
+
+  <script>
+    const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://dolar-arg-services.us-e2.cloudhub.io/api/dolar/cotizaciones");
+      xhr.send();
+      xhr.responseType = "json";
+      xhr.onload = () => {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          const data = xhr.response;
+          data.forEach(item => {
+          let dolarItem = document.createElement("div");
+          dolarItem.classList.add("col-md-4");
+          dolarItem.innerHTML = `
+            <div class="container">
+              <div class="card mb-3 box-shadow" style="height: auto;">
+                <div class="card-header" style="background-color: ${item.color};">
+                  <h4 class="my-0 font-weight-normal" style="font-size:22px"><img src="./assets/img/icons/${item.icon}" style="width: 30px;"> ${item.name}</h4>
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li><h4>Compra: &nbsp;&nbsp;<strong>$${item.buy}</strong></h4></li>
+                    <li><h4>Venta: &nbsp;&nbsp;<strong>$${item.sell}</strong></h4></li>
+                    <hr>
+                    <p> <img src="./assets/img/icons/${item.iconComment}" style="width: 30px;"> &nbsp; &nbsp;${item.comment}</p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          `;
+          document.querySelector("#dolar-container").appendChild(dolarItem);
+        });
+        } else {
+          console.log(`Error: ${xhr.status}`);
+        }
+      };
+  </script>
+    <script>
+      document.querySelector("#contact button").addEventListener("click", function (event) {
+        event.preventDefault();
+        const emailInput = document.querySelector("#contact input[type='email']");
+        const email = emailInput.value;
+        const validateEmail = (email) => {
+          return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        };
+        if (!validateEmail(email)) {
+          alert("Por favor, ingrese un correo electrónico válido");
+          return;
+        } else {
+          const data = { email: email };
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", "https://dolar-arg-services.us-e2.cloudhub.io/api/email", true);
+          xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          console.log(JSON.stringify(data));
+          xhr.send(JSON.stringify(data));
+          alert("Dado de alta correctamente");
+          document.querySelector("#contact input[type='email']").value = "";
+        }
+      });
+    </script>
+</body>
+</html>
